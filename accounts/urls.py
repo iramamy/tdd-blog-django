@@ -34,4 +34,5 @@ urlpatterns = [
         ),
         name="password_reset_complete",
     ),
+    path("user-profile/", views.user_profile, name="user-profile"),
 ]

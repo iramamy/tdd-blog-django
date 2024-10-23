@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+<h1>User Profile</h1>
+<p>
+  <span><b>User name: </b></span>{{user.username}} <br />
+  <span><b>Bio: </b></span>{{user.profile.bio}} <br />
+  <span><b>Email: </b></span>{{user.email}} <br />
+  <span><b>Address: </b></span>{{user.profile.address}} <br />
+</p>
+
+{% if posts %}
+
+<h1>User post</h1>
+<div>
+  {% for post in posts %}
+  <h3>{{post.title}}</h3>
+  <p>{{post.created_at}}</p>
+
+  <p>{{post.body}}</p>
+  {% endfor %}
+</div>
+
+{%else%}
+
+<h1>You do not have posts yet</h1>
+<p>Create post <a href="{% url 'create_post' %}">here</a></p>
+
+{% endif %} {% endblock content %}

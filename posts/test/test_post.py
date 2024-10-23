@@ -15,7 +15,7 @@ User = get_user_model()
 class PostModalTest(TestCase):
     """Test Post model"""
 
-    def test_post_modal_exists(self):
+    def test_post_model_exists(self):
         """Test if the post model exist or not"""
 
         post = Post.objects.count()
