@@ -48,10 +48,36 @@ This application follows a **TDD approach**, ensuring that every feature is thor
 
 ---
 
-## 🛠️ Running the Tests
+## 🛠️ Setups
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/iramamy/tdd-blog-django.git
+   cd tdd-blog-django
+   ```
+
+2. **Create a virtual environment:**
+
+```bash
+python -m venv env
+source venv/bin/activate
+```
+
+3. **Install dependencies:**
+
+```bash
+pip install -r requirements.txt
+```
 
 To run all the tests, use the following command:
+
+4. **Run tests:**
 
 ```bash
 python manage.py test
 ```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue to discuss what you would like to change.
