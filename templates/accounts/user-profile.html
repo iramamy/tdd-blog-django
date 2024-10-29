@@ -1,5 +1,8 @@
 {% extends 'base.html' %} {% block content %}
-<h1>User Profile</h1>
+<div>
+  <h1>User Profile</h1>
+  <a href="{% url 'update-profile' %}">Update profile</a>
+</div>
 <p>
   <span><b>User name: </b></span>{{user.username}} <br />
   <span><b>Bio: </b></span>{{user.profile.bio}} <br />

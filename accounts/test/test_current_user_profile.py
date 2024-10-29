@@ -61,7 +61,7 @@ class ProfileTest(TestCase):
         )
 
     def test_post_in_profile_page_belongs_to_current_user(self):
-        """Test post belongs to logged in user"""
+        """Test post belongs to a logged in user"""
 
         self.client.login(
             username=self.username,
@@ -82,7 +82,7 @@ class ProfileTest(TestCase):
         self.assertEqual(len(posts), 2)
 
     def test_no_posts_for_current_user(self):
-        """Test that some user may not have not created post yet"""
+        """Test that some user may not have created post yet"""
 
         self.client.login(
             username=self.username,

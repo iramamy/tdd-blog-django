@@ -24,6 +24,12 @@ class UserModelTest(TestCase):
         """Test that the user profile model exists"""
 
         user = baker.make(User)
-        profile = baker.prepare(Profile, user=user)
+        profile = Profile.objects.get(user=user)
 
         self.assertEqual(str(profile), profile.user.username)
+
+    def test_profile_create_on_user_creation(self):
+        """Test that a profile is created when a user is created"""
+
+        user = baker.make(User)
+        self.assertTrue(hasattr(user, "profile"))
